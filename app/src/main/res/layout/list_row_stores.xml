@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="12dp"
+        android:layout_margin="5dp"
+        app:cardPreventCornerOverlap="false"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp">
+
+        <!-- Thumbnail Image -->
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+
+    </androidx.cardview.widget.CardView>
+
+
+        <!-- Store Name -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:textColor="#421D49"
+            android:layout_marginTop="190dp"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <!-- Contact -->
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="2dp"
+            android:textSize="10dp" />
+
+        <!-- Genre -->
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating"
+            android:layout_marginTop="0dp"
+            android:textColor="@color/genre"
+            android:textSize="13dp" />
+
+        <!-- Address -->
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="231dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/releaseYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:layout_marginLeft="19dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="#8B5E93"
+            android:textStyle="bold"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    
+</RelativeLayout>

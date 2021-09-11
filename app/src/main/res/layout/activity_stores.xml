@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="#fcfcfc"
+    tools:context=".activites.StoresActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                app:title="Clothing Stores"
+                app:titleMargin="5dp"
+                app:titleTextColor="#ffffff"
+                android:background="@drawable/appbar_gradient"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/store_search"
+                    android:layout_width="310dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:padding="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Search for Stores"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/search_icon" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
+                android:backgroundTint="#ffffff"
+                android:divider="@null"
+                android:dividerHeight="15dp"
+                android:listSelector="@drawable/list_row_selector" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/navmenu"
+            app:menu="@menu/iconmenu"
+            app:headerLayout="@layout/nav_header"
+            android:layout_gravity="start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

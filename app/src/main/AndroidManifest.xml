@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ecommerce.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EcommerceApp"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activites.ProfileActivity" />
+        <activity
+            android:name=".activites.LoginActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.SignupActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.StoresActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.ProductsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.ProductDetailsActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.CartActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.PlaceOrderActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activites.OrderActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
